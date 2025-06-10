@@ -4,12 +4,14 @@
 <title>Greeting</title>
 </head>
 <body>
-<h1></h1>
+<h1 id="greet"></h1>
 <script>
-    const myTimeout = setTimeout(delayedGreeting, 2000);
-    function delayedGreeting(Alice) {
-        console.log("Hello" + Alice + "!");
+    function delayedGreeting(name) {
+        console.log("Hello, " + name + "!");
     }
-    </script>
+    setTimeout(function() {
+        delayedGreeting("Alice");
+    }, 2000);
+</script>
 </body>
 </html>
